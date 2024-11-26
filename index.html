@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
+    
     <header>
         <h1>Consulta e Alteração de Cadastro</h1>
     </header>
 
-    <!-- Conteúdo Principal -->
+    
     <main>
-        <!-- Formulário de consulta -->
-        <section id="consulta">
+        
+         <section id="consulta">
             <label for="id">ID:</label>
             <input type="text" id="id" placeholder="Informe o ID">
             <button onclick="consultarCadastro()">Consultar</button>
@@ -23,17 +23,15 @@
             <div id="informacoes"></div>
         </section>
 
-        <!-- Formulário de exclusão -->
+        
         <section id="exclusao">
-            <button id="btnExclusao" onclick="excluirCadastro()" style="display:none;">Exclusão</button>
+             <button id="btnExclusao" onclick="excluirCadastro()" style="display:none;">Exclusão</button>
         </section>
 
-        <!-- Resultado da Exclusão -->
         <section id="resultadoExclusao" style="display:none;">
             <div id="status"></div>
         </section>
 
-        <!-- Formulário de Alteração -->
         <section id="alteracao" style="display:none;">
             <h3>Alterar Cadastro</h3>
             <form id="formAlteracao">
@@ -51,10 +49,9 @@
 
                 <button type="button" onclick="alterarCadastro()">Alterar</button>
             </form>
-        </section>
+         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer>
         <p>Equipe: [Nome dos Membros]</p>
     </footer>
