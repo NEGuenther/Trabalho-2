@@ -1,0 +1,48 @@
+Segunda avaliação Programação Web
+Monte uma aplicação web baseado nos seguintes itens:
+ A tela deverá conter um cabeçalho no topo e um rodapé na base da página. No rodapé
+deverão constar os membros da equipe, que podem ser os mesmos da primeira avaliação.
+ A página principal deverá ter um campo <input type=”text”> onde será informado um
+ID numérico mais um botão com a label “Consultar”. Ao clicar neste botão, o ID informado
+deverá fazer uma requisição GET para a API RESTful na URI
+https://bu.furb.br/mcardoso/progWeb/apiRestAval.php/cadastro/ mais o ID informado.
+ A requisição acima retornará um JSON com a seguinte estrutura:
+{
+id: Number;
+nome: String;
+departamento: String;
+endereco: String;
+email: String;
+}
+ As propriedades acima deverão ser mostradas em um elemento da página (<div>, <p>,
+<hn>, <table>, etc.) seguido de um botão com a label “Exclusão”.
+ Este botão ao ser clicado deverá enviar uma requisição DELETE à URI
+https://bu.furb.br/mcardoso/progWeb/apiRestAval.php/cadastro/ mais o ID informado, a
+qual irá retornar um JSON com dois atributos:
+{
+status: String;
+mensagem: String;
+}
+ Deverá ser testado o conteúdo de “status” que pode ser “Ok” ou “Erro” (a API retornará de
+forma aleatória), e, dependendo do valor de “status”, o script deverá se comportar da
+seguinte maneira:
+o Caso o valor de “status” seja “Ok”, o conteúdo de “mensagem” deverá ser mostrado
+em um elemento com cor de fundo verde.
+o Caso o valor de “status” seja “Erro”, o conteúdo de “mensagem” deverá ser mostrado
+em um elemento com cor de fundo vermelha.
+ Mais abaixo nesta página deverá haver outro form de alteração, com um campo <input>
+para cada atributo acima (carregados com as informações retornadas em "Consultar”), e um
+botão com a label “Alterar”. Ao clicar neste botão, deverá ser solicitado uma requisição PUT
+à URI https://bu.furb.br/mcardoso/progWeb/apiRestAval.php/cadastro mais o ID acima com
+as informações do form encapsuladas em um JSON com os mesmos atributos acima. Esta
+requisição retornará um JSON também contendo “status” e “mensagem”, e o script deverá se
+comportar da mesma maneira acima, dependendo do resultado de “status”.
+Aspectos a considerar
+ Utilizar HTML5 e semântica.
+ Utilizar a arquitetura MVC na construção do código.
+ Prestar atenção na responsividade.
+ Caso não se utilize um framework de front-end web, os estilos deverão estar em um arquivo
+CSS em separado, assim como as rotinas em JavaScript em um arquivo JS também em
+separado.
+ Pode ser utilizado qualquer framework para auxiliar na implementação do código:
+Bootstrap, AngularJS, Vue.js, jQuery, React, etc. 

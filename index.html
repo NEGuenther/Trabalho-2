@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas e Alterações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Consulta e Alteração de Cadastro</h1>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Formulário de consulta -->
+        <section id="consulta">
+            <label for="id">ID:</label>
+            <input type="text" id="id" placeholder="Informe o ID">
+            <button onclick="consultarCadastro()">Consultar</button>
+
+            <div id="informacoes"></div>
+        </section>
+
+        <!-- Formulário de exclusão -->
+        <section id="exclusao">
+            <button id="btnExclusao" onclick="excluirCadastro()" style="display:none;">Exclusão</button>
+        </section>
+
+        <!-- Resultado da Exclusão -->
+        <section id="resultadoExclusao" style="display:none;">
+            <div id="status"></div>
+        </section>
+
+        <!-- Formulário de Alteração -->
+        <section id="alteracao" style="display:none;">
+            <h3>Alterar Cadastro</h3>
+            <form id="formAlteracao">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required><br>
+
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" required><br>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br>
+
+                <button type="button" onclick="alterarCadastro()">Alterar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Equipe: [Nome dos Membros]</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
